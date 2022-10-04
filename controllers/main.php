@@ -1,11 +1,12 @@
 <?php
 
-class Main
+class Main extends Controller
 {
 
-    function __construct()
+    function __construct ()
     {
-        echo "<p>Main controller...</p>";
+        parent::__construct();
+        $this -> view -> render("main/index");
     }
 
     function index()
@@ -13,3 +14,4 @@ class Main
         echo "<p>Executing index function...</p>";
     }
 }
+
